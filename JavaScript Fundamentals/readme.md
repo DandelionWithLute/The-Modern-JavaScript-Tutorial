@@ -20,3 +20,14 @@ There are subtle differences between let and var, but they do not matter to us y
 https://javascript.info/variables
 
 subtle美/ ˈsʌt(ə)l / adj.不易察觉的
+
+NaN not a number
+
+unary a.一元的
+negation n.反面、对立面
+
+binary a. 二元的
+subtract səbˈtrækt0 v.从一数中减去
+
+Comparisons
+https://javascript.info/comparison
