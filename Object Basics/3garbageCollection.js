@@ -1,0 +1,1 @@
+// Beware the v8 engine kills entities with no incoming methods.
