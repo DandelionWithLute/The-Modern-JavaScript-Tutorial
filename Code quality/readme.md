@@ -21,3 +21,10 @@ primitive
 ①原始的 (社会)
 ②原始的 (动物、植物)
 ③简陋的; 旧式的
+
+<!-- 
+Very important here!
+I learned Object.assign({},{})
+and
+structuredClone
+ -->
