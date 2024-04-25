@@ -32,3 +32,12 @@ function MakeSureNew(name) {
 
 let MakeSureNewUser = MakeSureNew("Dane");
 console.log(MakeSureNewUser);
+
+// Just skip this not that important part...
+// Is it possible to create functions A and B so that new A() == new B()?
+// let obj = {};
+
+// function A() { return obj; }
+// function B() { return obj; }
+
+// console.log( new A() === new B() ); // true
