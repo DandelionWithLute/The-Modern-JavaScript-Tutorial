@@ -13,4 +13,8 @@ My explanation to "this" is "the main program itself".
 primitive 原始的 (社会)
 
 Important:
-My explanation to Symbol() was to terminate the chaos of object[key] auto transformed to object["key"]
+My explanation to Symbol() was to terminate the chaos of object[key] auto transformed to / <b>alternative</b> for object["key"]
+
+
+vscode 4.8 file toPrimitive() method explained:
+A method that converts an object to a corresponding primitive value. Called by the ToPrimitive abstract operation.
