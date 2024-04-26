@@ -1,3 +1,4 @@
+// https://javascript.info/object-toprimitive
 let user = {
   name: "John",
   money: 1000,
@@ -11,4 +12,10 @@ let user = {
 };
 
 console.log(user);
-console.log(+user)
+console.log(+user);
+
+let userExampleObject = {
+  name: "Kevin",
+};
+
+console.log(userExampleObject.toString())
