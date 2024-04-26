@@ -9,3 +9,8 @@ OOP is a big thing, an interesting science of its own. How to choose the right e
 
 Important:
 My explanation to "this" is "the main program itself".
+
+primitive 原始的 (社会)
+
+Important:
+My explanation to Symbol() was to terminate the chaos of object[key] auto transformed to object["key"]
