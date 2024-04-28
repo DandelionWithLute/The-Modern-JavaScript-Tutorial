@@ -13,9 +13,13 @@ let user = {
 
 console.log(user);
 console.log(+user);
+console.log(user + 400);
 
 let userExampleObject = {
   name: "Kevin",
 };
 
-console.log(userExampleObject.toString())
+console.log(userExampleObject.toString());
+// Error
+// console.log(valueOf(userExampleObject));
+console.log(userExampleObject.valueOf());
