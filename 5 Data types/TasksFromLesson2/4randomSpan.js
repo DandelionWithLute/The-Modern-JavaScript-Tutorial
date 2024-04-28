@@ -1,3 +1,8 @@
+//
+//
+// A random number from min to max
+//
+//
 let a = 1;
 let b = 5;
 
@@ -12,7 +17,8 @@ function getSpecificRandomInt(a, b) {
     max = a;
   }
 
-  let correctSpan = Math.random() * (max - min + 1);
+  let correctSpan = Math.random() * (max - min);
+  //   let correctSpan = Math.random() * (max - min + 1);
   let ans = min + correctSpan - 0.5;
   console.log(Math.round(ans));
   return Math.round(ans);

@@ -57,3 +57,4 @@ console.log(
 // will be true unless you enter Infinity, -Infinity or not a number
 
 // isFinite check!
+console.log("https://javascript.info/number")
