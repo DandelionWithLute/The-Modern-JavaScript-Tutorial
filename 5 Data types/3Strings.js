@@ -54,3 +54,13 @@ console.log("Widget with id".includes("Wd"));
 
 // Wow, if = "A" added, code prettier module won't work
 // "Apple".slice(0,1) = "A";
+
+// .substring method(num1,num2) num order vise versa
+
+console.log("A".codePointAt())
+console.log("a".codePointAt())
+console.log("0".codePointAt())
+
+// startsWith()
+// endsWith()
+// includes()
