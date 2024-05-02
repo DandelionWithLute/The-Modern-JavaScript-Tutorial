@@ -49,18 +49,31 @@ console.log(b.indexOf("St"));
 console.log(b.indexOf("St", 2));
 
 console.log("Widget with id".includes("Wd"));
-"".startsWith("")
-"".endsWith("")
+"".startsWith("");
+"".endsWith("");
 
 // Wow, if = "A" added, code prettier module won't work
 // "Apple".slice(0,1) = "A";
 
 // .substring method(num1,num2) num order vise versa
 
-console.log("A".codePointAt())
-console.log("a".codePointAt())
-console.log("0".codePointAt())
+console.log("A".codePointAt());
+console.log("a".codePointAt());
+console.log("0".codePointAt());
 
 // startsWith()
 // endsWith()
 // includes()
+
+let stringToSlice = "thisIsAStringToSlice";
+let afterSlice = stringToSlice.slice(-4);
+console.log(afterSlice);
+console.log(afterSlice.at(1));
+console.log(afterSlice.toUpperCase());
+
+function extractCurrencyValue(str) {
+  return +str.slice(1);
+}
+
+console.log(extractCurrencyValue("$22"));
+

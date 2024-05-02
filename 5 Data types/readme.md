@@ -19,3 +19,33 @@ ctrl+space = suggestions
 3.IndexOf("str",num) num represents where the search starts.
 
 Widget 小装置
+trailing (植物)蔓生的
+
+let fruits = ["Banana"]
+
+let arr = fruits; // copy by reference (two variables reference the same array)
+
+<!--
+
+    process.stdout.write() = console.log with no new line
+
+ -->
+
+let i=0;i<arr.length;i++
+let item of items
+let key in arr
+
+
+Arrays are Objects
+https://www.w3schools.com/js/js_arrays.asp#:~:text=Arrays%20are%20Objects,returns%20%22object%22%20for%20arrays.
+
+<!-- Author:
+Let’s recall the rules:
+
+Two objects are equal == only if they’re references to the same object.
+If one of the arguments of == is an object, and the other one is a primitive, then the object gets converted to primitive, as explained in the chapter Object to primitive conversion.
+…With an exception of null and undefined that equal == each other and nothing else. -->
+
+array compare to array with conversion ? 
+    (conversion) [] will be primitive like "" :
+    (no conversion) == will be reference comparison and === will be reference comparason with no type conversion.
