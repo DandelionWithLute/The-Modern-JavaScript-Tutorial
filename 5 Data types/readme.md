@@ -35,7 +35,6 @@ let i=0;i<arr.length;i++
 let item of items
 let key in arr
 
-
 Arrays are Objects
 https://www.w3schools.com/js/js_arrays.asp#:~:text=Arrays%20are%20Objects,returns%20%22object%22%20for%20arrays.
 
@@ -46,6 +45,16 @@ Two objects are equal == only if they’re references to the same object.
 If one of the arguments of == is an object, and the other one is a primitive, then the object gets converted to primitive, as explained in the chapter Object to primitive conversion.
 …With an exception of null and undefined that equal == each other and nothing else. -->
 
-array compare to array with conversion ? 
-    (conversion) [] will be primitive like "" :
-    (no conversion) == will be reference comparison and === will be reference comparason with no type conversion.
+array compare to array with conversion ?
+(conversion) [] will be primitive like "" :
+(no conversion) == will be reference comparison and === will be reference comparason with no type conversion.
+
+<b>Mdn web docs sort method</b>
+It should return a number where:
+
+A negative value indicates that a should come before b.
+A positive value indicates that a should come after b.
+Zero or NaN indicates that a and b are considered equal.
+To memorize this, remember that (a, b) => a - b sorts numbers in ascending order.
+
+If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.

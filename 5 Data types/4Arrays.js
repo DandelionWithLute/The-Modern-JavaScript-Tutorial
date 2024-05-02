@@ -36,4 +36,23 @@ console.log(String(numArr));
 // Array Methods: Iterate:forEach
 ["Bilbo", "Gandalf", "Nazgul"].forEach(console.log);
 
+// let sortArray = ["a", "d", "b", "c"];
+// let newSortArray = sortArray.sort((a, b) => a - b);
 
+// [1,7,2,4] = -6 5 -2
+let numSortArray = [1, 2, 5, 3, 4];
+// let newNumSortArray = numSortArray.sort((a, b) => a - b);//ascending
+let newNumSortArray = numSortArray.sort((a, b) => b - a); //descending
+//
+// Important: a-b only works for numbers
+//
+
+// let newSortArray = sortArray.sort();
+// let newSortArray = sortArray.sort(function(a,b){return a-b;});
+// let newSortArray = sortArray.sort((a, b) => a - b);
+console.log(newNumSortArray);
+
+console.log(Array.isArray({}));
+console.log(Array.isArray([{}]));
+console.log(typeof {});
+console.log(typeof []);
