@@ -12,3 +12,7 @@ let johnMap = new Map();
 johnMap.set(johnMapCantBeCollected);
 johnMapCantBeCollected = null;
 console.log(johnMap.keys());
+
+
+// Too many details now, discarded just now...
+// Weakset Weakmap... I didn't use them too much...
