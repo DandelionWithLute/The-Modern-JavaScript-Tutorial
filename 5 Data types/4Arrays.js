@@ -56,3 +56,5 @@ console.log(Array.isArray({}));
 console.log(Array.isArray([{}]));
 console.log(typeof {});
 console.log(typeof []);
+
+

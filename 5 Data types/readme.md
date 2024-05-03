@@ -58,3 +58,31 @@ Zero or NaN indicates that a and b are considered equal.
 To memorize this, remember that (a, b) => a - b sorts numbers in ascending order.
 
 If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+
+
+ 
+// Important
+// Important
+// Important
+
+Important:We can use structuredClone, Object.assign(targetObject,ObjectToSign)
+and slice to copy now!
+
+// Important
+// Important
+// Important
+
+////////////////////////////////////////////
+ReduceMethod:
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+////////////////////////////////////////////
