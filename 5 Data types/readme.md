@@ -86,3 +86,12 @@ const sumWithInitial = array1.reduce(
 console.log(sumWithInitial);
 // Expected output: 10
 ////////////////////////////////////////////
+
+
+FOR EACH
+
+let set = new Set(["orange", "apple", "banana"]);
+for (let fruit of set) console.log(fruit);
+set.forEach((fruit1, fruit2, set) => console.log(fruit2));
+
+////////////////////////////////////////////
