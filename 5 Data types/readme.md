@@ -38,6 +38,8 @@ let key in arr
 Arrays are Objects
 https://www.w3schools.com/js/js_arrays.asp#:~:text=Arrays%20are%20Objects,returns%20%22object%22%20for%20arrays.
 
+Array from Objects needs length
+
 <!-- Author:
 Let’s recall the rules:
 
@@ -95,3 +97,11 @@ for (let fruit of set) console.log(fruit);
 set.forEach((fruit1, fruit2, set) => console.log(fruit2));
 
 ////////////////////////////////////////////
+DoubleTheCountFunction
+
+
+Object.fromEntries(Object.entries(obj).map((entry)=>entry[0],entry[1] * 2))
+
+
+How to make object nested arrays?
+Object.entries(obj)

@@ -1,0 +1,3 @@
+let user = {
+    name:"John"
+}
