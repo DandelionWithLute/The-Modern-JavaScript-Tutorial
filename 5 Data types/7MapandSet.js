@@ -72,3 +72,7 @@ const unique = (arr) => {
 };
 
 console.log(unique(values));
+
+// Over Detailed / Lasy to learn...
+// Excluding and transforming: replacer
+// Formatting: space
