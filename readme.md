@@ -5,3 +5,6 @@ https://javascript.info/
 https://www.youtube.com/watch?v=CFIaATNcpsc
 
 https://caniuse.com/
+
+nullish coalescing operator ?? does not work for integer 0
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
