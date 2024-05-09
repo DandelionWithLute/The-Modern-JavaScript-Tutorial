@@ -25,3 +25,13 @@ let arrToMerge = [...compareMaxArr1, ...compareMaxArr2];
 console.log(arrToMerge);
 console.log("This way is much shorter and easier than Object.assign({},copy)");
 console.log();
+///////////////////////////////////////////////////
+function showMe(firstName, lastName, otherArgs) {
+  console.log(firstName + " " + lastName);
+  console.log(arguments);
+  console.log(arguments["0"]);
+  console.log(arguments[2]);
+  console.log(arguments.callee);
+  console.log("arguments.length: " + arguments.length);
+}
+showMe("John", "Doe", "sda", "yrewert", true, "y345grh", 233);
