@@ -55,3 +55,19 @@ const sum = (a) => {
 
 console.log(sum(1)(-2));
 console.log(sum(432)(21321));
+
+let x = 1;
+
+function func() {
+  console.log(x); // ?
+
+  let x = 2;
+}
+
+func();
+// P.S. There’s a pitfall
+// the local variable x is known to the engine from the beginning of the function,
+// but "uninitialized" (unusable) until let ("dead zone")
+// hence the error
+
+console.log("I didn't pass the parameter!");
