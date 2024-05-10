@@ -63,11 +63,14 @@ function func() {
 
   let x = 2;
 }
+// Turn belown on!
+// func();
 
-func();
 // P.S. There’s a pitfall
 // the local variable x is known to the engine from the beginning of the function,
 // but "uninitialized" (unusable) until let ("dead zone")
 // hence the error
 
 console.log("I didn't pass the parameter!");
+console.log("a">"b")
+console.log("a">"B")
