@@ -45,4 +45,14 @@ function printEverySecondsNestedTimeout(from, to) {
 }
 printEverySecondsNestedTimeout(11, 15);
 // Task2
+// Important
 // Any setTimeout will run only after the current code has finished.
+
+let i = 0;
+setTimeout(() => {
+  console.log(i);
+}, 100);
+
+for (let j = 0; j < 10000000; j++) {
+  i++;
+}
