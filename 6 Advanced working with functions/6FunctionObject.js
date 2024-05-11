@@ -23,3 +23,10 @@ let objWithNumIndex = {
   length: 5,
 };
 console.log(Array.from(objWithNumIndex));
+
+
+// Can't be used from node the backend.
+let createSumFunctionConstructor = new Function('console.log("Hello1~")');
+let createSumFunctionConstructor2 = new Function(console.log("Hello2~"));
+// createSumFunctionConstructor();
+// createSumFunctionConstructor2();
