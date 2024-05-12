@@ -22,8 +22,33 @@ group.showList();
 // That is: group.title.
 //
 
-
 // Arrow functions can’t run with new
 // Not having this naturally means another limitation:
 // arrow functions can’t be used as constructors.
 //  They can’t be called with new.
+
+function defer(f, ms) {
+  return function () {
+    setTimeout(() => f.apply(this, arguments), ms);
+  };
+}
+
+function sayHi(who) {
+  console.log("Hello, " + who);
+}
+
+let sayHiDeferred = defer(sayHi, 2000);
+sayHiDeferred("John"); // Hello, John after 2 seconds
+
+// Summary
+// Arrow functions:
+//  Do not have this
+//  Do not have arguments
+//  Can’t be called with new
+//  They also don’t have super,
+// but we didn’t study it yet.
+// We will on the chapter Class inheritance
+// That’s because they are meant for short pieces of code
+//  that do not have their own “context”,
+// but rather work in the current one.
+// And they really shine in that use case.
