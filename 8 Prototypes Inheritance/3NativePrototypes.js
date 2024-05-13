@@ -20,7 +20,7 @@ let bigString = `
 console.log(bigString);
 
 //////////////////////////////////////////////////
-console.log("Tasks");
+console.log('Task1:Add method "f.defer(ms)" to functions');
 // function f(time) {
 //   return (self.defer = setTimeout(() => {
 //     console.log("Hello");
@@ -38,3 +38,23 @@ Function.prototype.defer = function (ms) {
 };
 
 f.defer(1000);
+console.log();
+
+//////////////////////////////////////////////////
+console.log('Task2:Add the decorating "defer()" to functions');
+
+function f2(ms) {
+  return;
+}
+
+Function.prototype.defer = function (ms) {
+  return function (a, b) {
+    setTimeout(() => {
+      console.log(a + b);
+    }, ms);
+  };
+};
+
+f2.defer(1000)(1, 2); // shows 3 after 1 second
+
+// I made it after 2 tries...
