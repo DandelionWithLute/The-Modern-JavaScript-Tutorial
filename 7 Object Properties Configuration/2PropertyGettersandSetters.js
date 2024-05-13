@@ -55,3 +55,4 @@ function User(name, birthday) {
 let john = new User("John", new Date(1992, 6, 1));
 console.log(john)
 console.log(john.age) // Very Important!
+// In this section we learned __proto__
