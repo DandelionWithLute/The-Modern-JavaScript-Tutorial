@@ -57,10 +57,34 @@ rabbit2.walk = function () {
 
 rabbit2.walk(); // Rabbit! Bounce-bounce!
 animal2.walk();
-//////////////////////////////////////
+//////////////////////////////////////////////////
 console.log();
 console.log("for...in");
 for (let prop in rabbit) console.log(prop);
 console.log();
 console.log("Object.keys()");
 console.log(Object.keys(rabbit));
+
+//////////////////////////////////////////////////
+
+// In this section we learned __proto__
+
+console.log("Task");
+let hamster = {
+  stomach: [],
+  eat(food) {
+    this.stomach.push(food);
+  },
+};
+
+let speedy = {
+  __proto__: hamster,
+};
+
+let lazy = {
+  __proto__: hamster,
+};
+
+speedy.eat("apple");
+console.log(speedy.stomach);
+console.log(lazy.stomach);
