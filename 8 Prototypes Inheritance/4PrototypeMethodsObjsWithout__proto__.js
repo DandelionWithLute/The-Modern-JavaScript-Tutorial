@@ -62,3 +62,23 @@ let summaryDesc = `
         Easy to Memory Verision: Object.create(Prototype,OPDescriptors)
 `;
 console.log(summaryDesc);
+
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
+Object.prototype.eatBanana = "eat a banana";
+console.log(animal.eatBanana);
+
+//////////////////////////////////////////////////
+let dictionary = {
+  toString: {
+    value() {
+      return Object.keys(this).join();
+    },
+  },
+};
+
+dictionary.apple = "apple";
+dictionary.__proto__ = "test";
+
+for (let key in dictionary) {
+  console.log(key);
+}
