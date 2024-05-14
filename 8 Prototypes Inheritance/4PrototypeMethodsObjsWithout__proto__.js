@@ -82,3 +82,6 @@ dictionary.__proto__ = "test";
 for (let key in dictionary) {
   console.log(key);
 }
+
+// Create a new obj and start with value null
+// The default property is not writable
