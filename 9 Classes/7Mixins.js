@@ -19,6 +19,7 @@ class User {
   }
 }
 
+// The key action is here
 Object.assign(User.prototype, sayHiMixin);
 // TypeError: janeWithMixin is not a function
 
@@ -34,8 +35,8 @@ let jane = new User("jane")
 console.log(jane)
 // Very very important bellow ! An object initializes with class !
 console.log(typeof jane)
-console.log(jane.sayHi())
-console.log(jane.sayBye())
+jane.sayHi()
+jane.sayBye()
 
 // Summary
 // Mixin – is a generic object-oriented programming term:
