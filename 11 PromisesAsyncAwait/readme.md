@@ -1,0 +1,2 @@
+miscellaneous各式各样的、混杂的
+analogy类比
