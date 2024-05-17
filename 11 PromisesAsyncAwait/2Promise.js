@@ -14,3 +14,11 @@ let promise = new Promise(function (resolve, reject) {
 resolve(value);
 // if an error has occurred, error is the error object.
 reject(error);
+
+// There can be only a single result or an error
+let promise2 = new Promise(function (resolve, reject) {
+  resolve("done");
+
+  reject(new Error("…")); // ignored
+  setTimeout(() => resolve("…")); // ignored
+});
