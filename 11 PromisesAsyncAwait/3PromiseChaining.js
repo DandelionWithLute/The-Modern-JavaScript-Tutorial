@@ -1,6 +1,7 @@
 class Thenable {
   constructor(num) {
     this.num = num;
+  }
   then(resolve, reject) {
     console.log(resolve);
     setTimeout(() => resolve(this.num * 2), 4000);
