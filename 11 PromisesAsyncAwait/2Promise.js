@@ -8,11 +8,10 @@
 
 let promise = new Promise(function (resolve, reject) {
   // executor (the producing code, "singer")
-
   // if the job is finished successfully, with result value.
-  resolve(value);
+  // resolve(value);
   // if an error has occurred, error is the error object.
-  reject(error);
+  // reject(error);
 });
 // There can be only a single result or an error
 let promise2 = new Promise(function (resolve, reject) {
@@ -28,3 +27,10 @@ let promise2 = new Promise(function (resolve, reject) {
 let promise3 = new Promise((resolve, reject) => {
   resolve(123);
 });
+
+// Delay with a promise
+function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+delay(3000).then(() => console.log("runs after 3 seconds."));
