@@ -14,4 +14,15 @@ new Promise((resolve) => resolve(1))
   })
   .then(console.log("Second then"));
 
-  // Example Loadscript
+// Example Loadscript
+
+// Rethrowing
+
+// Unhandled rejections
+
+// Error in setTimeout
+new Promise(function(resolve, reject) {
+  setTimeout(() => {
+    throw new Error("Whoops!");
+  }, 1000);
+}).catch(alert);
