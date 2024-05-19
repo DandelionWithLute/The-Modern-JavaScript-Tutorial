@@ -13,3 +13,5 @@ new Promise((resolve) => resolve(1))
     return new Thenable(result);
   })
   .then(console.log("Second then"));
+
+  // Example Loadscript
