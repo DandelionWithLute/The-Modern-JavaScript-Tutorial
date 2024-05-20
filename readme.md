@@ -8,3 +8,5 @@ https://caniuse.com/
 
 nullish coalescing operator ?? does not work for integer 0
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+
+Async/Await.js will make a folder called "Async" then a file called "Await.js"
