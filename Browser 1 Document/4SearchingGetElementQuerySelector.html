@@ -1,3 +1,4 @@
+<!-- https://javascript.info/searching-elements-dom -->
 <!-- Please don’t use id-named global variables to access elements -->
 <!-- The id must be unique -->
 
@@ -23,14 +24,62 @@
       <li>Has</li>
       <li>Passed</li>
     </ul>
+    <!-- 
+
+     -->
+    <h1>Contents</h1>
+
+    <div class="contents">
+      <ul class="book">
+        <li class="chapter">Chapter 1</li>
+        <li class="chapter">Chapter 2</li>
+      </ul>
+    </div>
+    <!-- 
+
+     -->
+    <table id="table">
+      <tr>
+        <td>Your age</td>
+
+        <td>
+          <label>
+            <input type="radio" name="age" value="young" checked /> less than 18
+          </label>
+          <label>
+            <input type="radio" name="age" value="mature" /> from 18 than 50
+          </label>
+          <label>
+            <input type="radio" name="age" value="young" /> less than 60
+          </label>
+        </td>
+      </tr>
+    </table>
     <script>
+      // Remember document.getElementById or just id
+
       //let elem = document.getElementById("elem");
       //alert(elem);
       elem.style.background = "red";
       //Err:elem-content.style.background="green";
+      // Remember this Important stuff:document.querySelectorAll
       let lastUnorderedLists = document.querySelectorAll("ul > li:last-child");
       for (let ele of lastUnorderedLists) {
         alert(ele.innerHTML);
+      }
+      //
+      //
+      //
+      //Remember dot and closest is to ancestor
+      let chapter = document.querySelector(".chapter"); //LI
+      alert(chapter.closest(".book")); // UL
+      alert(chapter.closest(".contents")); // DIV
+
+      alert(chapter.closest("h1")); // NULL (because h1 is not an ancestor)
+      // Remember not forget 's' letter
+      let inputs = document.getElementsByName("input");
+      for (let input of inputs) {
+        alert(input.value + ": " + input.checked);
       }
     </script>
   </body>
