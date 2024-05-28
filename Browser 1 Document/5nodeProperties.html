@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <p id="helloId">Hello</p>
+    <p>Hello</p>
+    <p>Hello Again</p>
+    <div id="aDivToChange">I'm going to make it blink!</div>
+    <script>
+      let helloId = document.getElementById("helloId");
+      // alert(document.body);
+      // alert(document.body.constructor.name);
+      console.log(helloId);
+      console.dir(helloId);
+      let elem = document.body;
+      elem.innerHTML += "<h1>Weird h1 added</h1>";
+      // This chapter is really important.
+      console.log(elem.outerHTML);
+
+      let ps = document.querySelectorAll("p");
+      for (let single of ps) {
+        console.log(single);
+      }
+      helloId.hidden = true;
+
+      let aDivToChange = document.getElementById("aDivToChange");
+      aDivToChange.hidden = false;
+      setInterval()
+      // No response maybe because it's <p> not <div>
+    </script>
+  </body>
+</html>
+
+<!-- But for DOM elements they are different:
+
+console.log(elem) shows the element DOM tree.
+console.dir(elem) shows the element as a DOM object, good to explore its properties. -->
+
+<!-- <div id="elem1"></div>
+<div id="elem2"></div>
+
+<script>
+  let name = prompt("What's your name?", "<b>Winnie-the-Pooh!</b>");
+
+  elem1.innerHTML = name;
+  elem2.textContent = name;
+</script> 
+
+Browser Environment:
+Winnie-the-Pooh!
+<b>Winnie-the-Pooh!</b>
+-->
