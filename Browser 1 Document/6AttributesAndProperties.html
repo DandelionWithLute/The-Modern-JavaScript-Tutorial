@@ -9,13 +9,34 @@
     <link rel="stylesheet" href="" />
   </head>
   <body id="test" something="non-standard">
+    <input />
     <script>
+      document.body.sayTagName = function () {
+        alert(this.tagName);
+      };
+      document.body.sayTagName();
+      //
+      //
+      //
       alert(document.body.id);
       // It doesn’t happen if the attribute is non-standard.
       alert(document.body.something);
       //
       // Important: document.body.getAttribute("something") // non-standard
       alert(document.body.getAttribute("something"));
+      //
+      //
+      //
+
+      let input = document.querySelector("input");
+      //
+      // attribute => property
+      input.setAttribute("value", "text");
+      alert(input.value); // text
+      //
+      // NOT property => attribute
+      input.value = "newValue2";
+      alert(input.getAttribute("value")); // text (not updated!)
     </script>
   </body>
 </html>
