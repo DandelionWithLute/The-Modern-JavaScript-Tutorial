@@ -32,8 +32,16 @@
 
       let aDivToChange = document.getElementById("aDivToChange");
       aDivToChange.hidden = false;
-      setInterval()
+      setInterval(() => {
+        aDivToChange.hidden = !aDivToChange.hidden;
+      }, 1000);
       // No response maybe because it's <p> not <div>
+
+      //
+      // Task2: What's in the nodeType?
+      //
+      alert(document.body.firstChild.nodeType);
+      alert(document.body.lastChild.nodeType);
     </script>
   </body>
 </html>
@@ -57,3 +65,5 @@ Browser Environment:
 Winnie-the-Pooh!
 <b>Winnie-the-Pooh!</b>
 -->
+
+<!-- ignored 2 a little bit over detailed tasks -->
