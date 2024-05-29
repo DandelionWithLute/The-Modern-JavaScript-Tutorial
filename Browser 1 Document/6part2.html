@@ -35,3 +35,42 @@
 </html>
 <!-- getAttributes('id') -->
 <!-- setAttributes('value','text') -->
+
+<!-- 
+
+  <body data-about="Elephants">
+    <script>
+      alert(document.body.dataset.about); // Elephants
+    </script>
+  </body>
+-->
+
+<!--Task1
+  <div data-widget-name="menu">Choose the genre</div>
+
+  <script>
+    // getting it
+    let elem = document.querySelector('[data-widget-name]');
+
+    // reading the value
+    alert(elem.dataset.widgetName);
+    // or
+    alert(elem.getAttribute('data-widget-name'));
+  </script>
+
+-->
+
+<!-- task2:change external references orange
+  let links = document.querySelectorAll('a');
+
+  for (let link of links){
+    let href = link.getAttribute('href');
+    if(!href) continue; // no attribute
+
+    if(!href.includes('://')) continue; // no protocol
+
+    if(href.startsWith('http://internal.com') continue;
+
+    link.style.color = 'orange';
+  }
+ -->
