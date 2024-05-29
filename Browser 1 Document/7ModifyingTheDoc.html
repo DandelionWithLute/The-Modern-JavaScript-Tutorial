@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer></script>
+    </body>
+</html>
+
+<!-- 
+    let div = document.createElement('div');
+    div.className = "alert";
+    div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
+
+ -->
+
+<!-- <ol id="ol">
+  <li>0</li>
+  <li>1</li>
+  <li>2</li>
+    </ol>
+
+    <script>
+    ol.before('before'); // insert string "before" before <ol>
+    ol.after('after'); // insert string "after" after <ol>
+
+    let liFirst = document.createElement('li');
+    liFirst.innerHTML = 'prepend';
+    ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+    let liLast = document.createElement('li');
+    liLast.innerHTML = 'append';
+    ol.append(liLast); // insert liLast at the end of <ol>
+    </script> -->
+
+
+<!-- 
+    Please note: the text is inserted “as text”, not “as HTML”,
+        with proper escaping of characters such as <, >.
+
+    &lt;p&gt;Hello&lt;/p&gt;
+    <hr>
+    <div id="div"></div>
+-->
+
+<!-- Summary
+    Methods to create new nodes:
+
+document.createElement(tag) – creates an element with the given tag,
+document.createTextNode(value) – creates a text node (rarely used),
+elem.cloneNode(deep) – clones the element, if deep==true then with all descendants.
+Insertion and removal:
+
+node.append(...nodes or strings) – insert into node, at the end,
+node.prepend(...nodes or strings) – insert into node, at the beginning,
+node.before(...nodes or strings) –- insert right before node,
+node.after(...nodes or strings) –- insert right after node,
+node.replaceWith(...nodes or strings) –- replace node.
+node.remove() –- remove the node.
+Text strings are inserted “as text”.
+
+There are also “old school” methods:
+
+parent.appendChild(node)
+parent.insertBefore(node, nextSibling)
+parent.removeChild(node)
+parent.replaceChild(newElem, node)
+All these methods return node.
+
+Given some HTML in html, elem.insertAdjacentHTML(where, html) inserts it depending on the value of where:
+
+"beforebegin" – insert html right before elem,
+"afterbegin" – insert html into elem, at the beginning,
+"beforeend" – insert html into elem, at the end,
+"afterend" – insert html right after elem.
+Also there are similar methods, elem.insertAdjacentText and elem.insertAdjacentElement, that insert text strings and elements, but they are rarely used.
+
+To append HTML to the page before it has finished loading:
+
+document.write(html)
+After the page is loaded such a call erases the document. Mostly seen in old scripts.
+
+-->
+
+<!-- 
+    Write the code to insert <li>2</li><li>3</li> between two <li> here:
+    
+    <ul id="ul">
+        <li id="one">1</li>
+        <li id="two">4</li>
+    </ul>
+    one.insertAdjacentHTML('afterend', '<li>2</li><li>3</li>'); -->
