@@ -1,3 +1,5 @@
+<!-- https://javascript.info/introduction-browser-events -->
+<!-- This chapter is actually very very important -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -91,4 +93,86 @@ The difference is easy to explain.
   elem.addEventListener("click", obj);
 </script> -->
 
-<!-- Very Important -->
+<!-- Very Important 
+    <button id="elem">Click me</button>
+
+    <script>
+      class Menu {
+        handleEvent(event) {
+          // mousedown -> onMousedown
+          let method = 'on' + event.type[0].toUpperCase() + event.type.slice(1);
+          this[method](event);
+        }
+
+        onMousedown() {
+          elem.innerHTML = "Mouse button pressed";
+        }
+
+        onMouseup() {
+          elem.innerHTML += "...and released.";
+        }
+      }
+
+      let menu = new Menu();
+      elem.addEventListener('mousedown', menu);
+      elem.addEventListener('mouseup', menu);
+    </script>
+-->
+
+<!-- Hide on click
+    <body>
+
+      <input type="button" id="hider" value="Click to hide the text" />
+
+      <div id="text">Text</div>
+
+      <script>
+        // Here it doesn't matter how we hide the text,
+        // could also use style.display:
+        document.getElementById('hider').onclick = function() {
+          document.getElementById('text').hidden = true;
+        }
+      </script>
+    </body>
+-->
+
+<!-- 
+    <script>
+    // Here it doesn't matter how we hide the text,
+    // could also use style.display:
+    document.getElementById('hider').onclick = function() {
+      document.getElementById('text').hidden = true;
+    }
+    </script>
+-->
+
+<!-- Hide self
+    <input type="button" onclick="this.hidden=true" value="Click to hide">
+ -->
+
+ <!-- Add a closing button
+pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>'); -->
+
+<!-- Which handlers run?
+    button.addEventListener("click", () => alert("1"));
+
+    button.removeEventListener("click", () => alert("1"));
+
+    button.onclick = () => alert(2);
+-->
+
+<!-- Create a sliding menu -->
+
+<!-- Add a closing button 
+    <script>
+        let panes = document.querySelectorAll('.pane');
+
+        for(let pane of panes) {
+          pane.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+          // button becomes the first child of pane
+          pane.firstChild.onclick = () => pane.remove();
+        }
+      </script>
+      
+ https://plnkr.co/edit/anSCWBqFUzLiAok5?p=preview&preview
+-->
