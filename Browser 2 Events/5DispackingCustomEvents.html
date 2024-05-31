@@ -1,0 +1,24 @@
+<!-- Important: dispatchEvent -->
+<button id="elem" onclick="alert('Click!');">Autoclick</button>
+<!--  -->
+<script>
+  let event = new Event("click");
+  elem.dispatchEvent(event);
+</script>
+
+<!-- Bubbling Example -->
+<h1 id="elem">Hello from the script!</h1>
+<!--  -->
+<script>
+  // catch on document...
+  document.addEventListener("hello", function(event2) { // (1)
+    alert("Hello from " + event2.target.tagName); // Hello from H1
+  });
+
+  // ...dispatch on elem!
+  let event2 = new Event("hello", {bubbles: true}); // (2)
+  elem.dispatchEvent(event2);
+
+  // the handler on document will activate and display the message.
+
+</script>

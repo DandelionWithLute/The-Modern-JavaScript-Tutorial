@@ -1,1 +1,55 @@
 <!-- https://javascript.info/default-browser-action -->
+
+<input value="Focus works" onfocus="this.value=''" />
+<input onmousedown="return false" onfocus="this.value=''" value="Click me" />
+
+<!-- elem.ontextmenu -->
+<p>Right-click for the document menu</p>
+<button id="elem">
+  Right-click for the button menu (fixed with event.stopPropagation)
+</button>
+<!--  -->
+<script>
+  let elem = document.body;
+  elem.oncontextmenu = function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    alert("Button context menu");
+  };
+
+  document.oncontextmenu = function (event) {
+    event.preventDefault();
+    alert("Document context menu");
+  };
+  
+</script>
+
+<!-- Important Task 1 -->
+<!-- Why "return false" doesn't work?
+  Why in the code below return false doesn’t work at all?
+  <script>
+    function handler() {
+      alert( "..." );
+      return false;
+    }
+  </script>
+  
+  <a href="https://w3.org" onclick="handler()">the browser will go to w3.org</a>
+-->
+<!-- For onclick="handler()" the function will be:
+
+function(event) {
+  handler() // the content of onclick
+
+
+} -->
+<!-- The fix is simple:
+  <script>
+    function handler() {
+      alert("...");
+      return false;
+    }
+  </script>
+  
+  <a href="https://w3.org" onclick="return handler()">w3.org</a>
+ -->
