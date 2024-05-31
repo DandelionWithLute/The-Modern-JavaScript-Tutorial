@@ -1,0 +1,57 @@
+<!-- https://javascript.info/event-delegation -->
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="menu">
+      <button data-action="save">Save</button>
+      <button data-action="load">Load</button>
+      <button data-action="search">Search</button>
+    </div>
+    <script>
+      class Menu {
+        // event delegation
+        constructor(elem) {
+          this.elem = elem;
+          elem.onclick = this.onClick.bind(this);
+        }
+
+        save() {
+          alert("saving");
+        }
+
+        load() {
+          alert("loading");
+        }
+
+        search() {
+          alert("searching");
+        }
+
+        onClick(event) {
+          let action = event.target.dataset.action;
+          if (action) {
+            this[action]();
+          }
+        }
+      }
+
+      new Menu(menu);
+    </script>
+  </body>
+</html>
+
+<!-- 
+    Counter: <input type="button" value="1" data-counter>
+    One more counter: <input type="button" value="2" data-counter>
+
+    <script>
+    document.addEventListener('click', function(event) {
+
+        if (event.target.dataset.counter != undefined) { // if the attribute exists...
+        event.target.value++;
+        }
+
+    });
+    </script>
+ -->
