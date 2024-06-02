@@ -9,38 +9,30 @@
     <link rel="stylesheet" href="./3.css" />
   </head>
   <body>
-    <div class="imgContainer">
-      <img id="vball" src="./vball.jpg" alt="a-vector-ball-here" />
-    </div>
+    <img src="https://en.js.cx/clipart/ball.svg" id="ball" />
 
     <script>
-      let ball = document.getElementById("vball");
+      let ball = document.getElementById("ball");
       ball.onmousedown = (event) => {
         let shiftX = event.clientX - ball.getBoundingClientRect().left;
-        let shiftY = event.clientY - ball.getBoundingClientRect().right;
+        let shiftY = event.clientY - ball.getBoundingClientRect().top;
 
         ball.style.position = "absolute";
         ball.style.zIndex = 1000;
 
-        // document.body.append(ball);
-
-        moveAt(event.pageX, event.pageY);
-
-        console.log(event.clientX, event.clientY);
-
-        function moveAt(pageX, pageY) {
-          // ball.style.left = pageX - ball.offsetWidth / 2 + "px";
-          // ball.style.top = pageY - ball.offsetHeight / 2 + "px";
+        const moveAt = (pageX, pageY) => {
           ball.style.left = pageX - shiftX + "px";
           ball.style.top = pageY - shiftY + "px";
-        }
+        };
+
+        const onMouseMove = (event) => {
+          moveAt(event.pageX, event.pageY);
+        };
 
         document.addEventListener("mousemove", onMouseMove);
 
-        // drop the ball, remove unneeded handlers
-        ball.onmouseup = function () {
+        ball.onmouseup = (event) => {
           document.removeEventListener("mousemove", onMouseMove);
-          ball.onmouseup = null;
         };
       };
 
