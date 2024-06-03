@@ -36,9 +36,13 @@
         };
       };
 
-      ball.ondragstart = function () {
+      /* ball.ondragstart = function () {
         return false;
-      };
+      }; */
+
+      // Wrong Expression: Failed
+      // ball.ondragstart = false;
+      ball.ondragstart = () => false;
     </script>
   </body>
 </html>
