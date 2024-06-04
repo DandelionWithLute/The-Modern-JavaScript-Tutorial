@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.code == "KeyZ" && (event.ctrlKey || event.metaKey)) {
+          alert("Undo");
+        }
+      });
+
+      //
+      // Press 'Q' and 'W' together
+      // This is actually a click spam program
+      // Important
+      // Important
+      // Important: This could result in high frequency consequences.
+      // Can be used in combined keys
+      function runOnKeys(func, ...codes) {
+        let pressed = new Set();
+
+        document.addEventListener("keydown", function (event) {
+          pressed.add(event.code);
+          console.log("adding key now");
+
+          /*
+            // yes, they are
+            // during the alert, if the visitor releases the keys,
+            // JavaScript does not get the "keyup" event
+            // and pressed set will keep assuming that the key is pressed
+            // so, to evadew "sticky" keys, we reset the status
+            // if the user wants to run the hotkey again - let them press all keys again
+          */
+          for (let code of codes) {
+            if (!pressed.has(code)) {
+              return;
+            }
+          }
+
+          // You may try to comment the command below
+          pressed.clear();
+
+          func();
+        });
+
+        document.addEventListener("keyup", function (event) {
+          pressed.delete(event.code);
+        });
+      }
+      runOnKeys(() => alert("Hello!"), "KeyQ", "KeyW");
+    </script>
+  </body>
+</html>
+
+<!-- Preventing the default action on keydown can cancel most of them,
+     with the exception of OS-based special keys. For instance,
+      on Windows Alt+F4 closes the current browser window.
+       And there’s no way to stop it by preventing the default action in JavaScript. -->
