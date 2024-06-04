@@ -1,0 +1,26 @@
+<style>
+  .error {
+    background: red;
+  }
+</style>
+
+Your email please: <input type="email" id="input" />
+<input
+  type="text"
+  style="width: 220px"
+  placeholder="make email invalid and try to focus here"
+/>
+
+<script>
+  input.onblur = function () {
+    if (!this.value.includes("@")) {
+      // not email
+      // show the error
+      this.classList.add("error");
+      // ...and put the focus back
+      input.focus();
+    } else {
+      this.classList.remove("error");
+    }
+  };
+</script>

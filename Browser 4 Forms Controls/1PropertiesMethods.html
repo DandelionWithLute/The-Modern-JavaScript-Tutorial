@@ -1,0 +1,16 @@
+<form name="my">
+  <input name="one" value="1" />
+  <input name="two" value="2" />
+</form>
+
+<script>
+  // get the form
+  let form = document.forms.my; // <form name="my"> element
+
+  // get the element
+  let elem = form.elements.one; // <input name="one"> element
+
+  alert(elem.value); // 1
+</script>
+
+<!-- use form.name to select form element-->
